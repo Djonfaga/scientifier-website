@@ -291,16 +291,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check system preference or default to dark
-    let isLight = false;
+    // Check localStorage preference or system preference or default to dark
+    const savedTheme = localStorage.getItem('theme');
+    let isLight = savedTheme === 'light';
+
+    // Apply saved theme immediately
+    if (isLight) {
+        body.classList.add('light-mode');
+        if (themeToggle) {
+            const icon = themeToggle.querySelector('svg');
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             isLight = !isLight;
             if (isLight) {
                 body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
             } else {
                 body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
             }
             // Rotate icon
             const icon = themeToggle.querySelector('svg');
