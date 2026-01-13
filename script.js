@@ -413,4 +413,47 @@ document.addEventListener('DOMContentLoaded', () => {
         initParticles();
         animate();
     }
+    /* --- 5. Contact Form Logic (EmailJS) --- */
+    // Initialize EmailJS
+    (function () {
+        emailjs.init("YavoYlqtomBUxbpMr");
+    })();
+
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            const serviceID = 'scientiservice';
+            const templateID = 'contact_form'; // Make sure to create a template with this ID in your EmailJS dashboard
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.innerText = 'Message Sent!';
+                    btn.style.backgroundColor = 'var(--color-primary)';
+                    contactForm.reset();
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.disabled = false;
+                        btn.style.backgroundColor = '';
+                    }, 3000);
+                }, (err) => {
+                    btn.innerText = 'Error!';
+                    btn.style.backgroundColor = 'red'; // Simple error indication
+                    console.log('FAILED...', err);
+                    alert("Failed to send message. Please check the console or try again later. (Did you update the API keys?)");
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.disabled = false;
+                        btn.style.backgroundColor = '';
+                    }, 3000);
+                });
+        });
+    }
+
 });
