@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Scientifier</title>
+    <meta name="description" content="Join the revolution. Contact Scientifier to start your journey to mastery.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scientifier.com/contact.html">
+    <meta property="og:title" content="Contact - Scientifier">
+    <meta property="og:description"
+        content="Join the revolution. Contact Scientifier to start your journey to mastery.">
+    <meta property="og:image" content="https://scientifier.com/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://scientifier.com/contact.html">
+    <meta property="twitter:title" content="Contact - Scientifier">
+    <meta property="twitter:description"
+        content="Join the revolution. Contact Scientifier to start your journey to mastery.">
+    <meta property="twitter:image" content="https://scientifier.com/assets/og-image.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Scientifier.</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="method.html" data-i18n="nav_system">The Method</a></li>
+                    <li><a href="programs.html" data-i18n="nav_programs">Programs</a></li>
+                    <li><a href="mission.html" data-i18n="nav_about">Mission</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <select id="language-select" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="ar">العربية</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact_title">Join the Revolution</h2>
+                <div class="contact-box"
+                    style="max-width: 600px; margin: 0 auto; background: var(--color-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem;" data-i18n="form_name">Your
+                                Name</label>
+                            <input type="text" id="name" name="name"
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid #333; background: var(--color-bg); color: inherit;"
+                                required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem;"
+                                data-i18n="form_email">Your Email</label>
+                            <input type="email" id="email" name="email"
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid #333; background: var(--color-bg); color: inherit;"
+                                required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem;"
+                                data-i18n="form_message">How can we help you evolve?</label>
+                            <textarea id="message" name="message" rows="4"
+                                style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid #333; background: var(--color-bg); color: inherit;"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; border: none; cursor: pointer;" data-i18n="btn_send">Ignite
+                            Potential</button>
+                    </form>
+                    <div class="direct-contact"
+                        style="margin-top: 2rem; text-align: center; color: var(--color-text-muted);">
+                        <p data-i18n="contact_direct">Or email our team directly:</p>
+                        <a href="mailto:scientifiers@gmail.com"
+                            style="color: var(--color-primary); font-weight: bold;">scientifiers@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Scientifier. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

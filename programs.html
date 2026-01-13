@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Scientifier</title>
+    <meta name="description" content="Elite learning programs: 1-on-1 Precision Coaching and Global Immersion Labs.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scientifier.com/programs.html">
+    <meta property="og:title" content="Programs - Scientifier">
+    <meta property="og:description"
+        content="Elite learning programs: 1-on-1 Precision Coaching and Global Immersion Labs.">
+    <meta property="og:image" content="https://scientifier.com/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://scientifier.com/programs.html">
+    <meta property="twitter:title" content="Programs - Scientifier">
+    <meta property="twitter:description"
+        content="Elite learning programs: 1-on-1 Precision Coaching and Global Immersion Labs.">
+    <meta property="twitter:image" content="https://scientifier.com/assets/og-image.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Scientifier.</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="method.html" data-i18n="nav_system">The Method</a></li>
+                    <li><a href="programs.html" data-i18n="nav_programs" class="active">Programs</a></li>
+                    <li><a href="mission.html" data-i18n="nav_about">Mission</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <select id="language-select" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="ar">العربية</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="programs" class="section bg-surface">
+            <div class="container">
+                <h2 class="section-title" data-i18n="programs_title">Elite Learning Programs</h2>
+                <div class="programs-grid">
+                    <div class="program-card featured">
+                        <div class="program-icon">🚀</div>
+                        <h3 data-i18n="prog_1on1_title">1-on-1 Precision Coaching</h3>
+                        <p class="program-desc" data-i18n="prog_1on1_desc">Your goals, your pace, our experts. Get
+                            hyper-personalized feedback via private video sessions to shatter plateaus and accelerate
+                            fluency.</p>
+                        <ul class="program-features">
+                            <li data-i18n="prog_feat_1">Customized Success Roadmap</li>
+                            <li data-i18n="prog_feat_2">Real-time Expert Correction</li>
+                            <li data-i18n="prog_feat_3">On-Demand Scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon">🌍</div>
+                        <h3 data-i18n="prog_group_title">Global Immersion Labs</h3>
+                        <p class="program-desc" data-i18n="prog_group_desc">Join the global arena. Connect, compete, and
+                            converse in high-energy weekly labs. Master English, French, Spanish, Turkish, Arabic, or
+                            Mandenkan with peers worldwide.</p>
+                        <ul class="program-features">
+                            <li data-i18n="prog_feat_4">Dynamic Social Learning</li>
+                            <li data-i18n="prog_feat_5">Structured Weekly Sprints</li>
+                            <li data-i18n="prog_feat_6">6 Language Ecosystems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Scientifier. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
