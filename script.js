@@ -279,6 +279,18 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.setAttribute('dir', 'ltr');
             document.documentElement.lang = lang;
         }
+
+        // Save preference
+        localStorage.setItem('language', lang);
+    }
+
+    // Load saved language or default
+    const savedLang = localStorage.getItem('language');
+    if (savedLang && translations[savedLang]) {
+        if (langSelect) {
+            langSelect.value = savedLang;
+        }
+        updateLanguage(savedLang);
     }
 
     if (langSelect) {
